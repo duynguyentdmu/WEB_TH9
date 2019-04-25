@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bt1</title>
+	<script type="text/javascript" language="javascript">
+		 function getDateTime() {
+	
+       
+
+    var now     = new Date(); 
+    var year    = now.getFullYear();
+    var month   = now.getMonth()+1; 
+    var day     = now.getDate();
+    var hour    = now.getHours();
+    var minute  = now.getMinutes();
+    var second  = now.getSeconds(); 
+    if(month.toString().length == 1) {
+         month = '0'+month;
+    }
+    if(day.toString().length == 1) {
+         day = '0'+day;
+    }   
+    if(hour.toString().length == 1) {
+         hour = '0'+hour;
+    }
+    if(minute.toString().length == 1) {
+         minute = '0'+minute;
+    }
+    if(second.toString().length == 1) {
+         second = '0'+second;
+    }   
+    var dateTime = year+'/'+month+'/'+day+' '+hour+':'+minute+':'+second;   
+     
+     document.write(day+'/'+month+'/'+year+' '+hour+':'+minute+':'+second);
+           
+           
+          
+    	// chia giay      
+     	var subsecond1 = (second % 10);//phan du phia sau cua giay
+     	var subsecond2 = (second-subsecond1);// phan truoc cua giay
+     	var kqsecond1 ;
+     	var kqsecond2 ;
+
+     	//chia phut
+     	var subminute1 = (minute % 10);//phan du phia sau cua phut
+     	var subminute2 = (minute-subminute1);// phan truoc cua phut
+     	var kqminute1 ;
+     	var kqminute2 ;
+
+     	//chia gio
+     	var subhour1 = (hour % 10);//phan du phia sau cua gio
+     	var subhour2 = (hour-subhour1);// phan truoc cua gio
+     	var kqhour1 ;
+     	var kqhour2 ;
+
+     	//chia ngay
+     	var subday1 = (day % 10);//phan du phia sau cua ngay
+     	var subday2 = (day-subday1);// phan truoc cua ngay
+     	var kqday1 ;
+     	var kqday2 ;
+
+     	//chia thang
+     	var submonth1 = (month % 10);//phan du phia sau cua ngay
+     	var submonth2 = (month-submonth1);// phan truoc cua ngay
+     	var kqmonth1 ;
+     	var kqmonth2 ;
+
+
+     
+   
+
+//chon giay
+ 		switch (subsecond1)
+     {
+        case 0 : { kqsecond1 = " giây";break;}
+        case 1 : { kqsecond1 = " mốt giây";break;}
+        case 2 : { kqsecond1 = " hai giây";break;}
+        case 3 : { kqsecond1 = " ba giây";break;}
+        case 4 : { kqsecond1 = " bốn giây";break;}
+        case 5 : { kqsecond1 = " lăm giây";break;}
+        case 6 : { kqsecond1 = " sáu giây";break;}
+        case 7 : { kqsecond1 = " bảy giây";break;}
+        case 8 : { kqsecond1 = " tám giây";break;}
+        case 9 : { kqsecond1 = " chín giây";break;}   
+    }
+         switch (subsecond2)
+    {
+        case 00 : { kqsecond2 = "";break;}
+        case 10 : { kqsecond2 = " mười";break;}
+        case 20 : { kqsecond2 = " hai mươi";break;}
+        case 30 : { kqsecond2 = " ba mươi";break;}
+        case 40 : { kqsecond2 = " bốn mươi";break;}
+        case 50 : { kqsecond2 = " năm mươi";break;}
+          
+    }
+
+//chon phut
+ 		switch (subminute1)
+     {
+        case 0 : { kqminute1 = "";break;}
+        case 1 : { kqminute1 = " một phút";break;}
+        case 2 : { kqminute1 = " hai phút";break;}
+        case 3 : { kqminute1 = " ba phút";break;}
+        case 4 : { kqminute1 = " bốn phút";break;}
+        case 5 : { kqminute1 = " lăm phút";break;}
+        case 6 : { kqminute1 = " sáu phút";break;}
+        case 7 : { kqminute1 = " bảy phút";break;}
+        case 8 : { kqminute1 = " tám phút";break;}
+        case 9 : { kqminute1 = " chín phút";break;}   
+    }
+
+
+         switch (subminute2)
+    {
+        case 00 : { kqminute2 = "";break;}
+        case 10 : { kqminute2 = " mười";break;}
+        case 20 : { kqminute2 = " hai mươi";break;}
+        case 30 : { kqminute2 = " ba mươi";break;}
+        case 40 : { kqminute2 = " bốn mươi";break;}
+        case 50 : { kqminute2 = " năm mươi";break;}
+          
+    }
+
+//chon gio
+ 		switch (subhour1)
+     {
+        case 0 : { kqhour1 = " không giờ";break;}
+        case 1 : { kqhour1 = " một giờ";break;}
+        case 2 : { kqhour1 = " hai giờ";break;}
+        case 3 : { kqhour1 = " ba giờ";break;}
+        case 4 : { kqhour1 = " bốn giờ";break;}
+        
+    }
+
+
+         switch (subhour2)
+    {
+        case 00 :
+        case 0: { kqhour2 = "";break;}
+        case 10 : { kqhour2 = " mười";break;}
+        case 20 : { kqhour2 = " hai mươi";break;}
+        
+          
+    }
+
+
+
+    //chon ngay
+ 		switch (subday1)
+     {
+        case 0 : { kqday1 = " không giờ";break;}
+        case 1 : { kqday1 = " một";break;}
+        case 2 : { kqday1 = " hai";break;}
+        case 3 : { kqday1 = " ba";break;}
+        case 4 : { kqday1 = " bốn";break;}
+        case 5 : { kqday1 = " lăm";break;}
+        case 6 : { kqday1 = " sáu";break;}
+        case 7 : { kqday1 = " bảy";break;}
+        case 8 : { kqday1 = " tám";break;}
+        case 9 : { kqday1 = " chín";break;} 
+        
+    }
+
+
+         switch (subday2)
+    {
+        case 00 :
+        case 0: { kqday2 = "Ngày ";break;}
+        case 10 : { kqday2 = "Ngày mười";break;}
+        case 20 : { kqday2 = "Ngày hai mươi";break;}
+        case 30 : { kqday2 = "Ngày ba mươi";break;}
+        
+          
+    }
+    //chon thang
+ 		switch (submonth1)
+     {
+        case 0 : { kqmonth1 = " ";break;}
+        case 1 : { kqmonth1 = " một";break;}
+        case 2 : { kqmonth1 = " hai";break;}
+        case 3 : { kqmonth1 = " ba";break;}
+        case 4 : { kqmonth1 = " tư";break;}
+        case 5 : { kqmonth1 = " lăm";break;}
+        case 6 : { kqmonth1 = " sáu";break;}
+        case 7 : { kqmonth1 = " bảy";break;}
+        case 8 : { kqmonth1 = " tám";break;}
+        case 9 : { kqmonth1 = " chín";break;} 
+        
+    }
+
+
+         switch (submonth2)
+    {
+        case 00 :
+        case 0: { kqmonth2 = " Tháng";break;}
+        case 10 : { kqmonth2 = " Tháng mười";break;}   
+    }
+
+
+	//chia nam
+     	var subyear1 = (year % 10);//phan du phia sau cua ngay
+     	var subyear2 = (year-subyear1);// phan truoc cua ngay
+     	var kqyear1 ;
+     	var kqyear2 ;
+     	var luoi = " năm hai nghìn không trăm mười chín"
+
+ //chon nam
+ 	
+    
+
+
+          
+            document.write(kqday2+kqday1+kqmonth2+kqmonth1+luoi+kqhour2+kqhour1+kqminute2+kqminute1+kqsecond2+kqsecond1);
+           
+           
+           
+           
+           
+           
+}
+	</script>
+</head>
+<body>
+	
+	<script >	
+	getDateTime();
+	
+	</script>
+
+
+
+</body>
+</html>

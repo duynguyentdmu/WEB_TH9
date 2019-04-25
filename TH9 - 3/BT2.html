@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+	<title>bt2</title>
+	
+</head>
+<script type="text/javascript" language="javascript">
+		function KiemTra()
+		{
+			if(NoiDung.value.length > 200) alert ("bạn đã gõ quá số kí tự cho phép ");
+			document.write(SoKyTu.value = NoiDung.value.length);//hien thi so ky tu trong textbox so ky tu
+
+		}
+	</script>
+<body style="font-family: arial">
+Số ký tự đã gõ: <input type="text" name="SoKyTu" id="SoKyTu"><br>
+<br>
+<textarea name="NoiDung" cols="50" rows="10" onkeyup="KiemTra()"></textarea>
+		
+</body>
+</html>
