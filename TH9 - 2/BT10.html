@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>bt10</title>
+	<script type="text/javascript" language="javascript">
+		function AnCacMenu()//ham an cac menu co tac dung lam an cac tang moi khi duoc goi
+		{
+			document.all.Menu1.style.visibility = 'hidden';
+			document.all.Menu2.style.visibility = 'hidden';
+			document.all.Menu3.style.visibility = 'hidden';
+		}
+	</script>
+</head>
+<!--Định nghĩa lớp   -->
+<style type="text/css">
+	.MenuBar{background-color: blue; color:white; font-family:arial;font-size:16 pt;width:150 px; cursor:point}
+	.Menu{background-color: yellow;color: white;position: absolute;top:40;visibility: hidden;}
+</style>
+<body onclick="AnCacMenu()">
+	<div class="Menu" id="Menu1" style="left: 10">
+		<a href="https://download.com.vn/">website tai phan mem</a><br>
+		<a href="https://meta.vn/">website TMĐT</a>
+	</div>
+<!--Tạo tầng hai   -->
+<div class="Menu" id="Menu2" style="left: 150">
+<a href="https://quantrimang.com/">website công nghệ</a><br>
+<a href="https://vndoc.com/">website học tập</a> </div>
+<!--Tạo tầng ba   -->
+<div class="Menu" id="Menu3" style="left: 250">
+<a href="https://tdmu.edu.vn/">dai hoc thu dau mot</a><br>
+<a href="https://tdmu.edu.vn/">dai hoc thu dau mot</a><br>
+<a href="https://tdmu.edu.vn/">dai hoc thu dau mot</a></div>
+
+<span class="MenuBar" onmousemove="AnCacMenu();document.all.Menu1.style.visibility='visible'">cac lien ket</span>
+
+<span class="MenuBar" onmousemove="AnCacMenu();document.all.Menu2.style.visibility='visible'">tin tuc</span>
+
+<span class="MenuBar" onmousemove="AnCacMenu();document.all.Menu3.style.visibility='visible'">cac hoat dong</span>
+
+
+	
+</body>
+</html>
